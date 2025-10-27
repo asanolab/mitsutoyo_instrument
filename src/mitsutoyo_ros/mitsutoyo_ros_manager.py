@@ -16,11 +16,11 @@ class MitsutoyoROSManager():
         self.sample_name = 'sample_a'
 
         # sub
-        self.sub_sample_id = rospy.Subscriber('mitsutoyo_micrometer/for_update/sample_id', UInt32, self.sample_id_cb)
-        self.sub_sample_name = rospy.Subscriber('mitsutoyo_micrometer/for_update/sample_name', String, self.sample_name_cb)
+        self.sub_sample_id   = rospy.Subscriber('mitsutoyo_micrometer/write/sample_id', UInt32, self.sample_id_cb)
+        self.sub_sample_name = rospy.Subscriber('mitsutoyo_micrometer/write/sample_name', String, self.sample_name_cb)
 
         # pub
-        self.pub = rospy.Publisher('mitsutoyo_micrometer', MitsutoyoMicrometer, queue_size=1)
+        self.pub = rospy.Publisher('mitsutoyo_micrometer/read', MitsutoyoMicrometer, queue_size=1)
 
 
     def sample_id_cb(self, msg):
@@ -34,6 +34,7 @@ class MitsutoyoROSManager():
 
 
     def publisher(self):
-        micrometer_value = self.mi.get_value_by_button()
-        rospy.loginfo('id: %s, name: %s, value: %s', self.sample_id, self.sample_name, micrometer_value)
-        self.pub.publish(self.sample_id, self.sample_name, micrometer_value)
+        while not rospy.is_shutdown():
+            micrometer_value = self.mi.get_value_by_button()  # can't stop by ctrl+c
+            rospy.loginfo('id: %s, name: %s, value: %s', self.sample_id, self.sample_name, micrometer_value)
+            self.pub.publish(self.sample_id, self.sample_name, micrometer_value)
