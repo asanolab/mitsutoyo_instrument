@@ -5,9 +5,14 @@ import rospy
 from mitsutoyo_ros.mitsutoyo_ros_manager import MitsutoyoROSManager
 
 
-if __name__ == '__main__':
+def main():
     rospy.init_node('mitsutoyo_ros_manager_node')
     mrm = MitsutoyoROSManager()
+    mrm.publisher()  # publisherを起動
 
-    while not rospy.is_shutdown():
-        mrm.publisher()
+
+if __name__ == '__main__':
+    try:
+        main()
+    except rospy.ROSInterruptException:
+        pass

@@ -8,4 +8,4 @@ if __name__ ==  "__main__":
     mi = MitsutoyoInterface()
     value = mi.get_value_by_button()
 
-    print(value)
+    print('value is %s' %value)

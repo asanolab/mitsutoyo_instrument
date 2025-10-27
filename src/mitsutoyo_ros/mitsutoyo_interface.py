@@ -41,10 +41,16 @@ class MitsutoyoInterface(SerialInterface):
 
     def get_value_by_button(self):
         print('Waiting for button input...')
-        while(1):
-            data = self.readline_str()
-            if(data != ''):
-                value = self.extract_value_from_data(data)
-                break
+        value = 0
+
+        try:
+            while True:
+                data = self.readline_str()
+                if(data != ''):
+                    value = self.extract_value_from_data(data)
+                    break
+                time.sleep(0.1)
+        except KeyboardInterrupt:
+            print("Stop reading")
 
         return value
