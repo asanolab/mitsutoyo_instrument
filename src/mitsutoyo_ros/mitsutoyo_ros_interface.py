@@ -8,9 +8,9 @@ from mitsutoyo_ros.msg import MitsutoyoMicrometer
 from mitsutoyo_ros.mitsutoyo_interface import MitsutoyoInterface
 
 
-class MitsutoyoROSManager():
+class MitsutoyoROSInterface():
     def __init__(self):
-        print('Generate MitsutoyoROSManager')
+        print('Generate MitsutoyoROSInterface')
         self.mi = MitsutoyoInterface()
         self.sample_id = 0
         self.sample_name = 'sample_a'

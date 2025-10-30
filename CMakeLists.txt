@@ -33,7 +33,7 @@ catkin_install_python(
   PROGRAMS
   scripts/get_value_by_cmd.py
   scripts/get_value_by_button.py
-  scripts/mitsutoyo_ros_manager_node.py
+  scripts/mitsutoyo_ros_interface_node.py
   scripts/micrometer_data_manager_node.py
   DESTINATION
     ${CATKIN_PACKAGE_BIN_DESTINATION}

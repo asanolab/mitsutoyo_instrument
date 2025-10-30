@@ -19,5 +19,5 @@ or
 
 ## ROS node
 ```
-rosrun mitsutoyo_ros mitsutoyo_ros_manager_node.py
+rosrun mitsutoyo_ros mitsutoyo_ros_interface_node.py
 ```
