@@ -19,5 +19,5 @@ or
 
 ## ROS node
 ```
-rosrun mitsutoyo_ros mitsutoyo_ros_interface_node.py
+roslaunch mitsutoyo_ros mitsutoyo_micrometer.launch
 ```
