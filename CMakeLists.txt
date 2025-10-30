@@ -2,12 +2,17 @@ cmake_minimum_required(VERSION 2.8.0)
 project(mitsutoyo_ros)
 
 find_package(catkin REQUIRED COMPONENTS
-  std_msgs
   rospy
+  std_msgs
   message_generation
 )
 
 catkin_python_setup()
+
+add_service_files(
+  FILES
+  GetMicrometerValue.srv
+  )
 
 add_message_files(
   FILES
@@ -20,7 +25,7 @@ generate_messages(
   )
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime rospy std_msgs
+  CATKIN_DEPENDS rospy std_msgs message_runtime
   )
 
 # install
@@ -28,6 +33,8 @@ catkin_install_python(
   PROGRAMS
   scripts/get_value_by_cmd.py
   scripts/get_value_by_button.py
+  scripts/mitsutoyo_ros_manager_node.py
+  scripts/micrometer_data_manager_node.py
   DESTINATION
     ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

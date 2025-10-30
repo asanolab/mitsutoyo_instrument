@@ -1,0 +1,5 @@
+uint32 sample_id
+---
+float32 value
+bool success
+string message
