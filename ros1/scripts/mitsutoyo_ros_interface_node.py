@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import rospy
-from mitsutoyo_ros.mitsutoyo_ros_interface import MitsutoyoROSInterface
+from mitsutoyo_instrument_ros1.mitsutoyo_ros_interface import MitsutoyoROSInterface
 
 
 def main():

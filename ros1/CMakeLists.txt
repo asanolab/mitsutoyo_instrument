@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.0)
-project(mitsutoyo_ros)
+project(mitsutoyo_instrument_ros1)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -31,8 +31,6 @@ catkin_package(
 # install
 catkin_install_python(
   PROGRAMS
-  scripts/get_value_by_cmd.py
-  scripts/get_value_by_button.py
   scripts/mitsutoyo_ros_interface_node.py
   scripts/micrometer_data_manager_node.py
   DESTINATION

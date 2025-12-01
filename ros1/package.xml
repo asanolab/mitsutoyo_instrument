@@ -1,5 +1,5 @@
 <package format="2">
-  <name>mitsutoyo_ros</name>
+  <name>mitsutoyo_instrument_ros1</name>
   <version>0.1.0</version>
   <description> ROS interface for mitsutoyo micrometer </description>
 

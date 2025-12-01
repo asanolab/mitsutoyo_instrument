@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import rospy
-from mitsutoyo_ros.micrometer_data_manager import MicrometerDataManager
+from mitsutoyo_instrument_ros1.micrometer_data_manager import MicrometerDataManager
 
 
 def main():
