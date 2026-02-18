@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.0)
-project(mitsutoyo_instrument_ros1)
+project(mitsutoyo_instrument)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from mitsutoyo_ros.mitsutoyo_interface import MitsutoyoInterface
+from mitsutoyo_instrument.mitsutoyo_interface import MitsutoyoInterface
 
 
 if __name__ ==  "__main__":

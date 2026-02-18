@@ -4,8 +4,8 @@
 import rospy
 import pandas as pd
 from datetime import datetime
-from mitsutoyo_instrument_ros1.msg import MitsutoyoMicrometer
-from mitsutoyo_instrument_ros1.srv import GetMicrometerValue, GetMicrometerValueResponse
+from mitsutoyo_instrument.msg import MitsutoyoMicrometer
+from mitsutoyo_instrument.srv import GetMicrometerValue, GetMicrometerValueResponse
 
 
 class MicrometerDataManager():

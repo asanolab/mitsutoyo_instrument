@@ -2,13 +2,11 @@
 
 ## Install
 ```
-cd mitsutoyo_instrument
-python3 -m pip install -e .
+python3 -m pip install -e labautopy
 ```
 
 ## Build for ROS interface
 ```
-cd ros1
 catkin build
 ```
 

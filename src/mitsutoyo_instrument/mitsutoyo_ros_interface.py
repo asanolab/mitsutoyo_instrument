@@ -5,7 +5,7 @@ import rospy
 from std_msgs.msg import UInt32
 from std_msgs.msg import String
 from mitsutoyo_instrument.mitsutoyo_interface import MitsutoyoInterface
-from mitsutoyo_instrument_ros1.msg import MitsutoyoMicrometer
+from mitsutoyo_instrument.msg import MitsutoyoMicrometer
 
 
 class MitsutoyoROSInterface():

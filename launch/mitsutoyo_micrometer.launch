@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="mitsutoyo_ros_interface" pkg="mitsutoyo_instrument" type="mitsutoyo_ros_interface_node.py" output="screen">
+  </node>
+  <node name="micrometer_data_manager" pkg="mitsutoyo_instrument" type="micrometer_data_manager_node.py" output="screen">
+  </node>
+</launch>
