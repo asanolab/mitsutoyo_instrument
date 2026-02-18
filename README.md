@@ -1,11 +1,12 @@
 # mitsutoyo_instrument
 
-## Install
+## Install & Build
+Install python module
 ```
 python3 -m pip install -e labautopy
 ```
 
-## Build for ROS interface
+Build for ROS interface
 ```
 catkin build
 ```
@@ -20,7 +21,7 @@ sudo usermod -a -G dialout $USER
 ## Usage
 ## デバイス単体
 ```
-cd nitsutoyo_instrument
+cd scripts
 ./get_value_by_button.py  # then, press push button
 
 or
