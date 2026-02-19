@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time
-from labautopy.serial_interface import SerialInterface
+from device_control.serial_interface import SerialInterface
 
 
 class MitsutoyoInterface(SerialInterface):
