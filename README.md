@@ -1,14 +1,9 @@
 # mitsutoyo_instrument
 
 ## Install & Build
-Install python module
-```
-python3 -m pip install -e labautopy
-```
-
 Build for ROS interface
 ```
-catkin build
+catkin bt
 ```
 
 ## Setup for hardware instrument
